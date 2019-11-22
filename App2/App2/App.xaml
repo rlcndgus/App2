@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelNormalStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+
+            <Style x:Key="EntryNormalStyle" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="Fill" />
+            </Style>
+
+            <Style x:Key="NormalButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Gray" />
+            </Style>
+
+            <Color x:Key="BackgroundColorType1">Blue</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

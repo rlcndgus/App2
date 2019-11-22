@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:App2.ViewModel"
+             x:Class="App2.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions> 
+        <Grid.RowDefinitions> 
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="User Information Manager" FontAttributes="Bold" FontSize="Large"></Label>
+
+        <Label Grid.Row="1" Grid.Column="0" Text="UserID11"  Style="{StaticResource LabelNormalStyle}"></Label>
+        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding UserID,Mode=TwoWay}" Style="{StaticResource EntryNormalStyle}"></Entry>
+
+        <Label Grid.Row="2" Grid.Column="0" Text="UserName"  Style="{StaticResource LabelNormalStyle}"></Label>
+        <Entry Grid.Row="2" Grid.Column="1" Text="{Binding UserName,Mode=TwoWay}" Style="{StaticResource EntryNormalStyle}"></Entry>
+
+        <Label Grid.Row="3" Grid.Column="0" Text="Email"  Style="{StaticResource LabelNormalStyle}"></Label>
+        <Entry Grid.Row="3" Grid.Column="1" Text="{Binding Email,Mode=TwoWay}" Style="{StaticResource EntryNormalStyle}"></Entry>
+
+        <Label Grid.Row="4" Grid.Column="0" Text="Telephone"  Style="{StaticResource LabelNormalStyle}"></Label>
+        <Entry Grid.Row="4" Grid.Column="1" Text="{Binding Telephone,Mode=TwoWay}" Style="{StaticResource EntryNormalStyle}"></Entry>
+
+        <Label Grid.Row="5" Grid.Column="0" Text="RegistDate"  Style="{StaticResource LabelNormalStyle}"></Label>
+        <Entry Grid.Row="5" Grid.Column="1" Text="{Binding RegistDate,Mode=TwoWay}" Style="{StaticResource EntryNormalStyle}"></Entry>
+
+        <StackLayout Grid.Row="6" Grid.ColumnSpan="2" HorizontalOptions="Center" Orientation="Horizontal">
+
+            <Button x:Name="btnRegist" Text="REGIST" Command="{Binding RegistCommand}" Style="{StaticResource NormalButtonStyle}"></Button>
+            <Button Text="MODIFY" Command="{Binding ModifyCommand}" CommandParameter="M" Style="{StaticResource NormalButtonStyle}"></Button>
+            <Button Text="DELETE" Command="{Binding DeleteCommand}" Style="{StaticResource NormalButtonStyle}"></Button>
+        </StackLayout>
+
+        <ListView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource BackgroundColorType1}">
+           
+        </ListView>
+ 
+    </Grid>
+
+</ContentPage>
