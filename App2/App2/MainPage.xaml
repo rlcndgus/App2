@@ -47,7 +47,7 @@
 
         <StackLayout Grid.Row="6" Grid.ColumnSpan="2" HorizontalOptions="Center" Orientation="Horizontal">
 
-            <Button x:Name="btnRegist" Text="REGIST" Command="{Binding RegistCommand}" Style="{StaticResource NormalButtonStyle}"></Button>
+            <Button x:Name="btnRegist" Text="REGIST111" Command="{Binding RegistCommand}" Style="{StaticResource NormalButtonStyle}"></Button>
             <Button Text="MODIFY" Command="{Binding ModifyCommand}" CommandParameter="M" Style="{StaticResource NormalButtonStyle}"></Button>
             <Button Text="DELETE" Command="{Binding DeleteCommand}" Style="{StaticResource NormalButtonStyle}"></Button>
         </StackLayout>
